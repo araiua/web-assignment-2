@@ -1,0 +1,194 @@
+body{
+  background: #111112;
+  color: #F4F4F4;
+}
+
+.portfolio-page {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 32px 0;
+}
+
+.portfolio-hero {
+  margin-bottom: 64px;
+}
+
+.portfolio-hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.6rem, 8vw, 5.2rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin: 0 0 24px;
+}
+
+.portfolio-hero p {
+  max-width: 46ch;
+  color: rgba(244, 244, 244, 0.65);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  padding-bottom: 96px;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 20px;
+  border-radius: 18px;
+  background: #1A1A1C;
+  transition: background 0.2s ease;
+}
+
+.project-card:hover {
+  background: #202022;
+}
+
+.project-card img {
+  width: 180px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.project-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.project-copy h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.project-copy p {
+  margin: 0;
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.project-btn {
+  margin-top: 4px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  background: transparent;
+  border: 1px solid rgba(244, 244, 244, 0.3);
+  color: #F4F4F4;
+  font-size: 0.82rem;
+  font-weight: 500;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.project-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #14141a;
+}
+
+.profile-sidebar {
+  background: #1A1A1C;
+  border-radius: 18px;
+  padding: 28px;
+  height: fit-content;
+  position: sticky;
+  top: calc(var(--nav-height) + 24px);
+}
+
+.portrait {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.profile-sidebar h2 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 8px;
+}
+
+.profile-sidebar > p {
+  margin: 0 0 24px;
+  color: rgba(244, 244, 244, 0.6);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(244, 244, 244, 0.1);
+}
+
+.info-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.info-label {
+  font-size: 0.75rem;
+  color: rgba(244, 244, 244, 0.45);
+}
+
+.info-value {
+  font-size: 0.9rem;
+}
+
+.contact-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #14141a;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.portfolio-footer {
+  border-top: 1px solid rgba(244, 244, 244, 0.1);
+  padding: 24px 32px;
+  text-align: center;
+}
+
+.portfolio-footer p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: rgba(244, 244, 244, 0.5);
+}
+
+@media (max-width: 860px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+
+  .project-card {
+    flex-wrap: wrap;
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+}
